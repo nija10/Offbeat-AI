@@ -19,6 +19,10 @@ function generateText(event){
   let prompt=`User instructions are: Give a fun fact about ${instructionsInput.value}`;
   let apiUrl=`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let textElement=document.querySelector("#text")
+  textElement.classList.remove("hidden");
+  textElement.innerHTML=`<div class="generating">⏳ Generating a fact about ${instructionsInput.value}...</div>`
+
   axios.get(apiUrl).then(displayText);
 
 }
