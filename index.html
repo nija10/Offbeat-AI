@@ -5,18 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   <link rel="stylesheet" href="src/style.css">
   <title>Offbeat AI</title>
 </head>
 <body>
   <div class="container">
   <header>
-  <h1>Offbeat AI</h1>
+  <h1>AI Facts Generator</h1>
   </header>
 
   <main>
     <form id="ai-form">
-      <input type="text" placeholder="Ask me anything..." autofocus required autocomplete="off" class="instructions">
+      <input type="text" placeholder="Let me tell you a random fact about..." autofocus required autocomplete="off" class="instructions" id="user-instructions">
       <input type="submit" class="submit-button">
 
     </form>
